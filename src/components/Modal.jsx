@@ -1,11 +1,15 @@
 import React from 'react'
 import { AiOutlineClose } from "react-icons/ai"
-import Input from './Input'
+import { useDispatch } from 'react-redux'
+import { modalFunc } from '../redux/modalSlice'
 
-const Modal = ({ title, content, btnText, btnFunc }) => {
 
-    const onChangeFunc = (e) => {
+const Modal = ({ title, content }) => {
 
+    const dispatch = useDispatch()
+
+    const handleClose = () => {
+        dispatch(modalFunc())
     }
 
     return (
@@ -13,33 +17,12 @@ const Modal = ({ title, content, btnText, btnFunc }) => {
             <div className='w-1/3 bg-white shadow-lg rounded-md p-4  '>
                 <div className='border-b-2 py-3 flex justify-between items-center'>
                     <div className='text-2xl'>{title}</div>
-                    <AiOutlineClose size={24} />
+                    <AiOutlineClose size={24} onClick={handleClose} />
                 </div>
-                <Input
-                    placeholder={"Ürün ekle"}
-                    id={"Ürün"}
-                    type={"ürün Türü"}
-                    name={"Ürün adı"}
-                    onChange={onChangeFunc}
-                />
-                <Input
-                    placeholder={"Fiyat ekle"}
-                    id={"fiyat"}
-                    type={"fiyat Türü"}
-                    name={"Fiyat adı"}
-                    onChange={onChangeFunc}
-                />
-                <Input
-                    placeholder={"Fiyat ekle"}
-                    id={"fiyat"}
-                    type={"fiyat Türü"}
-                    name={"Fiyat adı"}
-                    onChange={onChangeFunc}
-                />
-
+                {content}
             </div>
         </div>
     )
 }
 
-export default Modal
+export default Modal    

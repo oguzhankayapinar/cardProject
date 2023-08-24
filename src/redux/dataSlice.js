@@ -8,12 +8,12 @@ export const dataSlice = createSlice({
     name: 'data',
     initialState,
     reducers: {
-        // incrementByAmount: (state, action) => {
-        //   state.value += action.payload
-        // },
+        createDataFunc: (state, action) => {
+            state.data = [...state.data, action.payload]
+        },
     },
 })
 
-export const { } = dataSlice.actions
+export const { createDataFunc } = dataSlice.actions
 
 export default dataSlice.reducer
