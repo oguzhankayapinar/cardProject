@@ -2,14 +2,19 @@ import React from 'react'
 import { AiOutlineClose } from "react-icons/ai"
 import { useDispatch } from 'react-redux'
 import { modalFunc } from '../redux/modalSlice'
+import { useNavigate } from 'react-router-dom'
 
 
 const Modal = ({ title, content }) => {
 
     const dispatch = useDispatch()
 
+    const navigate = useNavigate()
+
     const handleClose = () => {
         dispatch(modalFunc())
+        navigate("/");
+
     }
 
     return (

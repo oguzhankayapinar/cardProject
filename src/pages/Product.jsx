@@ -33,7 +33,7 @@ const Product = () => {
     const location = useLocation()
     let loc = location?.search.split("=")[1]
 
-
+    const navigate = useNavigate();
 
     useEffect(() => {
         setProductInfo(data.find(dt => dt.id == loc))

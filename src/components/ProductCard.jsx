@@ -19,6 +19,11 @@ const ProductCard = ({ dt }) => {
         navigate(`/?update=${dt?.id}`)
     }
 
+    const deleteFunc = () => {
+        dispatch(deleteDataFunc(dt?.id))
+        navigate("/")
+    }
+
     return (
         <div className='w-[200px] h-[200px] relative m-2 rounded-md'>
             <img className='w-full h-full  rounded-md' src={dt?.url} alt="" />
@@ -33,7 +38,7 @@ const ProductCard = ({ dt }) => {
             {
                 openEdit && (
                     <div className='bg-black border absolute text-white top-4 right-2 p-2 text-sm'>
-                        <div onClick={() => dispatch(deleteDataFunc(dt?.id))} className='cursor-pointer'>Sil</div>
+                        <div onClick={deleteFunc} className='cursor-pointer'>Sil</div>
                         <div onClick={updateFunc} className='cursor-pointer'>Güncelle</div>
                     </div>
                 )
