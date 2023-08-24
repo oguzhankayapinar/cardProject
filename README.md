@@ -1,8 +1,11 @@
-# React + Vite
+<h3 align="center">  This repo is a Card Project.👋</h3>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3 align="center">Screenshots</h3>
 
-Currently, two official plugins are available:
+<h3 align="center">Live https://card-project-1.vercel.app/ </h3>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+![cardproject](https://github.com/oguzhankayapinar/cardProject/assets/99039655/175925e4-860f-47f9-8ca1-2bea4c493beb)
+
+
+
